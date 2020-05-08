@@ -5,12 +5,25 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Ymagi.Models;
+using Ymagi.Models.ViewModels;
 
 namespace Ymagi.Controllers
 {
     public class HomeController : Controller
     {
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Login(Login login)
         {
             return View();
         }
